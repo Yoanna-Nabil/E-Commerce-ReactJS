@@ -1,0 +1,181 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+:root
+{
+    --main-color:#0aad0a;
+    --light-color:#f0f3f2;
+    --shadow: rgba(145,158,171,.2) 0px 2px 4px -1px,rgba(145,158,171,.14) 0px 4px 5px 0px,rgba(145,158,171,.12) 0px 1px 10px 0px;
+    --font-family:'Encode Sans Expanded', sans-serif;
+    --rating-color:#ffc908;
+}
+
+body{
+    font-family: var(--font-family) !important;
+}
+.rating-color
+{
+    color: var(--rating-color);
+}
+.cursor-pointer
+{
+    cursor: pointer;
+}
+a , a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+.product {
+    border: solid 1px transparent;
+}
+.product:hover
+{
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+.product .btn 
+{
+    transition: transform 0.4s , opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.product:hover .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.text-main
+{
+    color: var(--main-color);
+}
+.bg-main
+{
+    background-color: var(--main-color) !important;
+}
+.bg-main-light 
+{
+    background-color: var(--light-color) !important;
+}
+
+.counter {
+    position: absolute;
+    top: -15px;
+    right: -5px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 15px;
+}
+
+.marginTop {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.heart {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    transform: translateX(50%);
+    font-size: 30px;
+    color:var(--main-color);
+    background-color:white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+
+.active {
+    background-color: var(--main-color);
+    color: white !important;
+    border-radius: 10px;
+}
+li a{
+    border-radius: 10px;
+}
+
+
+.newAccount {
+    color: var(--main-color);
+    font-weight: bolder;
+}
+
+
+
+
+
+@media screen and (min-width: 992px) {
+    section , .checkout {
+        width: 50% !important;
+        padding: 10px !important;
+        /* margin: auto !important; */
+    }
+    .NoItem {
+        width: 50%;
+        margin-inline: auto ;
+    }
+    /* section img {
+        width: 150px;
+    } */
+}
+
+@media screen and (max-width: 768px) {
+    section .checkout {
+        width: 80% !important;
+        padding: 10px !important;
+        /* margin: auto !important; */
+    }
+    section img {
+        width: 250px;
+    }
+
+    ul a.nav-link {
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 0;
+        padding: 5px;
+    }
+
+    .resMarginTop {
+        margin-top: 15px;
+    }
+
+    .product .btn 
+{
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.NoItem {
+    width: 100%;
+    
+}
+
+    
+}
+
+.mainStyle {
+    margin-top: 86px;
+    min-height: calc(-106px + 100vh);
+
+}
+
+
+.order {
+    box-shadow: var(--shadow);
+}
+
+
+.offline {
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
