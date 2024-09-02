@@ -14,7 +14,7 @@ export default function CheckOut() {
   async function onlinePayment(values) {
     setLoading(true)
   let {data} = await payment(values)
-  window.location.href = data.session.url
+  window.open(data.session.url, '_self')
   }
 
   

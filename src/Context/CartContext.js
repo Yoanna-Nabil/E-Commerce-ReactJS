@@ -47,9 +47,12 @@ export default function CartContextProvider(props) {
       }
 
       function payment(shippingAddress) {
-        return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url:https://yoanna-nabil.github.io/E-Commerce-ReactJS/#`,{shippingAddress},{
+        return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}`,{shippingAddress},{
             headers:{
                 token : localStorage.getItem('userToken')
+            },
+            params: {
+                url: 'http://localhost:3000'
             }
         })
         .then((response)=>response).catch((error)=>error)
